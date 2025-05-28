@@ -1,4 +1,3 @@
-# https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/world-countries.json
 import os
 
 import folium  # type: ignore
@@ -98,9 +97,9 @@ def make_worldmap():
     affiliations = add_countries_column(affiliations)
     affiliations = clean_countries(affiliations)
     countries = count_country_frequency(affiliations)
-    countries.to_csv("files/counttries.csv")
+    countries.to_csv("files/countries.csv")
     plot_world_map(countries)
-
+    
 
     print()
     for i, row in affiliations.head().iterrows():
@@ -110,8 +109,6 @@ def make_worldmap():
 
 if __name__ == "__main__":
     make_worldmap()
-    
-    
     
     
     
